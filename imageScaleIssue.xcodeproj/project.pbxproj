@@ -12,9 +12,13 @@
 		9941D748215F69CB00651005 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9941D746215F69CB00651005 /* Main.storyboard */; };
 		9941D74A215F69CC00651005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9941D749215F69CC00651005 /* Assets.xcassets */; };
 		9941D74D215F69CC00651005 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9941D74B215F69CC00651005 /* LaunchScreen.storyboard */; };
+		CE05F4D1C952DC0B0C555AEE /* Pods_imageScaleIssue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E2D6BF38607EA6AF0E6D86 /* Pods_imageScaleIssue.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5466A23DE4F9B858B20385EC /* Pods-imageScaleIssue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imageScaleIssue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imageScaleIssue/Pods-imageScaleIssue.debug.xcconfig"; sourceTree = "<group>"; };
+		92822597A4F1A7521C6CAB64 /* Pods-imageScaleIssue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imageScaleIssue.release.xcconfig"; path = "Pods/Target Support Files/Pods-imageScaleIssue/Pods-imageScaleIssue.release.xcconfig"; sourceTree = "<group>"; };
+		95E2D6BF38607EA6AF0E6D86 /* Pods_imageScaleIssue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imageScaleIssue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9941D73F215F69CB00651005 /* imageScaleIssue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imageScaleIssue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9941D742215F69CB00651005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9941D744215F69CB00651005 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE05F4D1C952DC0B0C555AEE /* Pods_imageScaleIssue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21E06961BA57F54FEB75338F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95E2D6BF38607EA6AF0E6D86 /* Pods_imageScaleIssue.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9941D736215F69CB00651005 = {
 			isa = PBXGroup;
 			children = (
 				9941D741215F69CB00651005 /* imageScaleIssue */,
 				9941D740215F69CB00651005 /* Products */,
+				9DA190931A0F1EAAF219534D /* Pods */,
+				21E06961BA57F54FEB75338F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = imageScaleIssue;
 			sourceTree = "<group>";
 		};
+		9DA190931A0F1EAAF219534D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5466A23DE4F9B858B20385EC /* Pods-imageScaleIssue.debug.xcconfig */,
+				92822597A4F1A7521C6CAB64 /* Pods-imageScaleIssue.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9941D751215F69CC00651005 /* Build configuration list for PBXNativeTarget "imageScaleIssue" */;
 			buildPhases = (
+				096DCE25787056C2011E4059 /* [CP] Check Pods Manifest.lock */,
 				9941D73B215F69CB00651005 /* Sources */,
 				9941D73C215F69CB00651005 /* Frameworks */,
 				9941D73D215F69CB00651005 /* Resources */,
+				A3EBCECF7BAF15C800E1A13F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,59 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		096DCE25787056C2011E4059 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-imageScaleIssue-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3EBCECF7BAF15C800E1A13F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-imageScaleIssue/Pods-imageScaleIssue-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imageScaleIssue/Pods-imageScaleIssue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9941D73B215F69CB00651005 /* Sources */ = {
@@ -280,6 +359,7 @@
 		};
 		9941D752215F69CC00651005 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5466A23DE4F9B858B20385EC /* Pods-imageScaleIssue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +378,7 @@
 		};
 		9941D753215F69CC00651005 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92822597A4F1A7521C6CAB64 /* Pods-imageScaleIssue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
